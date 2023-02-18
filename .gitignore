@@ -1,1 +1,3 @@
 .meson-subproject-wrap-hash.txt
+subprojects/*
+!subprojects/*.wrap
