@@ -6,6 +6,7 @@ python_include = run_command(python3_config, '--includes', check:false).stdout()
 
 sources = [
   'pybind11_protobuf/proto_cast_util.cc',
+  'pybind11_protobuf/proto_utils.cc',
   'pybind11_protobuf/check_unknown_fields.cc'
 ]
 
@@ -26,7 +27,7 @@ deps = [protoc_subproj.get_variable('protoc_dep'), pybind_subproj.get_variable('
 
 pybind11_protobuf_native_proto_caster_lib = static_library('pybind11_protobuf_native_proto_caster', 
                                                             sources: sources,
-                                                            include_directories: [python_include],
+                                                            include_directories: python_include,
                                                             dependencies: deps)
 
 pybind11_protobuf_dep = declare_dependency(
