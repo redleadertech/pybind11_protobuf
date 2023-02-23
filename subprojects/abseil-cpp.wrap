@@ -1,6 +1,6 @@
-[wrap-file]
+[wrap-git]
 directory = abseil-cpp
-source_url = git@github.com:redleadertech/abseil-cpp.git
+url = git@github.com:redleadertech/abseil-cpp.git
 revision=HEAD
 
 [provide]
